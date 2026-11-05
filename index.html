@@ -1,0 +1,1153 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prioritize Sleep | Give Your Body the Rest It Deserves</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --background: #090d1c;
+    --background2: #11182d;
+    --card: rgba(24, 34, 59, 0.85);
+    --purple: #a99cff;
+    --lavender: #d4caff;
+    --blue: #8abaff;
+    --white: #f4f4ff;
+    --muted: #a6afca;
+    --border: rgba(180, 190, 255, 0.15);
+    --success: #8de0bd;
+    --error: #ff9aab;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background:
+        radial-gradient(ellipse at top right, #242449 0%, transparent 45%),
+        radial-gradient(ellipse at bottom left, #172943 0%, transparent 50%),
+        var(--background);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 12px;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    background: rgba(14, 20, 39, 0.92);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    padding: 15px 22px;
+    margin-bottom: 35px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    color: var(--lavender);
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--lavender);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 60px 25px;
+
+    border-radius: 28px;
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(42, 45, 91, 0.85),
+            rgba(15, 30, 55, 0.9)
+        );
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+.moon {
+    font-size: 65px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 25px rgba(212,202,255,0.5));
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero .eyebrow {
+    color: var(--blue);
+    letter-spacing: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 7vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: var(--lavender);
+}
+
+.hero p {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+/* GENERAL */
+
+section {
+    margin-bottom: 35px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading small {
+    color: var(--blue);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: var(--lavender);
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.highlight {
+    color: var(--lavender);
+    font-weight: bold;
+}
+
+/* INTRODUCTION */
+
+.intro {
+    text-align: justify;
+}
+
+.sleep-stat {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #27294d, #1b2943);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    margin-top: 20px;
+}
+
+.sleep-stat .number {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    color: var(--lavender);
+    line-height: 1.2;
+}
+
+.sleep-stat p {
+    margin: 0;
+}
+
+/* GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.info-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(169,156,255,0.5);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+/* LIST */
+
+.custom-list {
+    list-style: none;
+}
+
+.custom-list li {
+    padding: 12px 15px;
+    background: rgba(169,156,255,0.07);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    color: var(--muted);
+}
+
+.custom-list li::before {
+    content: "✦ ";
+    color: var(--purple);
+}
+
+/* BUTTONS */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #a99cff, #8abaff);
+    color: #10162b;
+    padding: 13px 24px;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(169,156,255,0.25);
+}
+
+.secondary-btn {
+    background: rgba(169,156,255,0.1);
+    border: 1px solid var(--border);
+    color: var(--lavender);
+    padding: 12px 20px;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.secondary-btn:hover {
+    background: rgba(169,156,255,0.2);
+}
+
+/* GAMES */
+
+.game-card {
+    background: linear-gradient(145deg, #171f39, #11182b);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.game-label {
+    display: inline-block;
+    background: rgba(169,156,255,0.12);
+    color: var(--lavender);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.question {
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.answer-option {
+    background: rgba(169,156,255,0.07);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.answer-option:hover {
+    background: rgba(169,156,255,0.18);
+}
+
+.answer-option.selected {
+    background: rgba(169,156,255,0.25);
+    border-color: var(--purple);
+}
+
+.answer-option.correct {
+    border-color: var(--success);
+    background: rgba(141,224,189,0.12);
+}
+
+.answer-option.wrong {
+    border-color: var(--error);
+    background: rgba(255,154,171,0.12);
+}
+
+.feedback {
+    min-height: 30px;
+    margin: 15px 0;
+    color: var(--lavender);
+}
+
+.score {
+    color: var(--blue);
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* SOURCES */
+
+.source-list {
+    list-style: none;
+}
+
+.source-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.source-list a {
+    color: var(--blue);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.source-list a:hover {
+    color: var(--lavender);
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 35px 10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.back-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--purple);
+    color: #10162b;
+    padding: 12px 17px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+    .container {
+        padding: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .card,
+    .game-card {
+        padding: 22px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">☾ Prioritize Sleep</div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Sleep</a>
+        <a href="#tips">Sleep Tips</a>
+        <a href="#games">Games</a>
+        <a href="#sources">Sources</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<header class="hero" id="home">
+
+    <div class="moon">🌙</div>
+
+    <div class="eyebrow">A Student Wellness Guide</div>
+
+    <h1>Prioritize Sleep:<br>
+        <span>Give Your Body the Rest It Deserves.</span>
+    </h1>
+
+    <p>
+        Sleep is not a luxury. It is an essential part of taking care
+        of yourself, your health, and your future.
+    </p>
+
+    <br>
+
+    <a href="#about">
+        <button class="primary-btn">Explore the Night ✦</button>
+    </a>
+
+</header>
+
+<!-- INTRODUCTION -->
+<section id="about">
+
+    <div class="section-heading">
+        <small>01 — Introduction</small>
+        <h2>Why Sleep Matters</h2>
+    </div>
+
+    <div class="card intro">
+
+        <p>
+            Sleep is an important part of our daily lives. It helps our
+            body rest, recover, and prepare for the next day. Getting
+            enough sleep improves our memory, concentration, mood, and
+            overall health.
+        </p>
+
+        <p>
+            As students, we need enough sleep to focus on our lessons,
+            perform better in school, and stay active throughout the day.
+            That is why we should make sleep a priority, not an option.
+        </p>
+
+        <div class="sleep-stat">
+            <div class="number">8–10</div>
+            <h3>Hours of Sleep</h3>
+            <p>Recommended every night for teenagers aged 13–18.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHAT IS SLEEP -->
+<section>
+
+    <div class="section-heading">
+        <small>02 — Understanding Sleep</small>
+        <h2>What Is Sleep?</h2>
+    </div>
+
+    <div class="card">
+
+        <p>
+            Sleep is a natural process in which our body and brain rest,
+            recover, and prepare for another day. During sleep, the body
+            continues working to support brain function, physical health,
+            and emotional well-being.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- BENEFITS -->
+<section>
+
+    <div class="section-heading">
+        <small>03 — The Benefits</small>
+        <h2>Why Is Sleep Important?</h2>
+    </div>
+
+    <div class="grid">
+
+        <div class="info-card">
+            <div class="icon">🧠</div>
+            <h3>Improves Memory</h3>
+            <p>Helps us remember and understand what we learn.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">🎯</div>
+            <h3>Boosts Concentration</h3>
+            <p>Helps us focus during classes and activities.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">🌱</div>
+            <h3>Supports Physical Health</h3>
+            <p>Helps the body grow, recover, and maintain health.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">😊</div>
+            <h3>Improves Mood</h3>
+            <p>Supports emotional balance and mood regulation.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">🛡️</div>
+            <h3>Supports Immunity</h3>
+            <p>Helps support the immune system and its functions.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LACK OF SLEEP -->
+<section>
+
+    <div class="section-heading">
+        <small>04 — The Consequences</small>
+        <h2>What Happens When We Don't Get Enough Sleep?</h2>
+    </div>
+
+    <div class="card">
+
+        <ul class="custom-list">
+            <li>We feel tired and sleepy during the day.</li>
+            <li>We may have difficulty remembering lessons.</li>
+            <li>We find it harder to concentrate.</li>
+            <li>We may become easily irritated.</li>
+            <li>Our school performance may be affected.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- TIPS -->
+<section id="tips">
+
+    <div class="section-heading">
+        <small>05 — Better Sleep Habits</small>
+        <h2>Tips to Prioritize Sleep</h2>
+    </div>
+
+    <div class="grid">
+
+        <div class="info-card">
+            <div class="icon">🕰️</div>
+            <h3>Consistent Schedule</h3>
+            <p>Follow a consistent sleeping and waking schedule.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">📵</div>
+            <h3>Limit Gadgets</h3>
+            <p>Avoid using gadgets close to bedtime.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">☕</div>
+            <h3>Avoid Late Caffeine</h3>
+            <p>Avoid caffeinated beverages late in the day.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">🛏️</div>
+            <h3>Comfortable Environment</h3>
+            <p>Keep your bedroom comfortable, quiet, and dark.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">📚</div>
+            <h3>Manage Schoolwork</h3>
+            <p>Finish school activities earlier whenever possible.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">🌌</div>
+            <h3>Relax Before Bed</h3>
+            <p>Read, listen to calm music, or practice gentle relaxation.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- INTERACTIVE GAMES -->
+<section id="games">
+
+    <div class="section-heading">
+        <small>06 — Interactive Activities</small>
+        <h2>Sleep Knowledge Challenge</h2>
+        <p>Test what you've learned about sleep!</p>
+    </div>
+
+    <!-- GAME 1 -->
+    <div class="game-card">
+
+        <span class="game-label">GAME 1 · GUESSING GAME</span>
+
+        <h2>Guess the Sleeping Hours!</h2>
+
+        <p class="question">
+            How many hours of sleep does a teenager need every night?
+        </p>
+
+        <div class="answers" id="guessAnswers">
+
+            <button class="answer-option" data-answer="A">
+                A. 1–2 hours
+            </button>
+
+            <button class="answer-option" data-answer="B">
+                B. 6–7 hours
+            </button>
+
+            <button class="answer-option" data-answer="C">
+                C. 8–10 hours
+            </button>
+
+            <button class="answer-option" data-answer="D">
+                D. Wag na matulog
+            </button>
+
+        </div>
+
+        <button class="primary-btn" onclick="checkGuess()">
+            Check Answer
+        </button>
+
+        <button class="secondary-btn" onclick="resetGuess()">
+            Try Again
+        </button>
+
+        <div class="feedback" id="guessFeedback"></div>
+
+    </div>
+
+    <!-- GAME 2 -->
+    <div class="game-card">
+
+        <span class="game-label">GAME 2 · SLEEP QUIZ</span>
+
+        <h2>Sleep Quiz</h2>
+
+        <div id="quizQuestion" class="question"></div>
+
+        <div id="quizAnswers" class="answers"></div>
+
+        <button class="primary-btn" onclick="checkQuiz()">
+            Check Answer
+        </button>
+
+        <button class="secondary-btn" onclick="nextQuiz()">
+            Next Question →
+        </button>
+
+        <div class="feedback" id="quizFeedback"></div>
+
+        <div class="score" id="quizScore">
+            Score: 0
+        </div>
+
+    </div>
+
+    <!-- GAME 3 -->
+    <div class="game-card">
+
+        <span class="game-label">GAME 3 · TRUE OR FALSE</span>
+
+        <h2>True or False?</h2>
+
+        <div id="tfQuestion" class="question"></div>
+
+        <div class="answers">
+
+            <button class="answer-option" onclick="answerTF(true)">
+                ✔ True
+            </button>
+
+            <button class="answer-option" onclick="answerTF(false)">
+                ✘ False
+            </button>
+
+        </div>
+
+        <button class="secondary-btn" onclick="nextTF()">
+            Next Statement →
+        </button>
+
+        <div class="feedback" id="tfFeedback"></div>
+
+        <div class="score" id="tfScore">
+            Score: 0
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SOURCES -->
+<section id="sources">
+
+    <div class="section-heading">
+        <small>07 — References</small>
+        <h2>Sources & Further Reading</h2>
+    </div>
+
+    <div class="card">
+
+        <p>
+            The following references provide reliable information
+            about sleep, its benefits, and recommended sleep duration.
+        </p>
+
+        <ul class="source-list">
+
+            <li>
+                <a href="https://www.cdc.gov/healthy-schools/sleep/index.html"
+                   target="_blank" rel="noopener noreferrer">
+                    Centers for Disease Control and Prevention (CDC) —
+                    Sleep and Health
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.nhlbi.nih.gov/health/sleep-deprivation/how-much-sleep"
+                   target="_blank" rel="noopener noreferrer">
+                    National Heart, Lung, and Blood Institute —
+                    How Much Sleep Is Enough?
+                </a>
+            </li>
+
+            <li>
+                <a href="https://aasm.org/resources/pdf/pressroom/teen-sleep-duration-recommendation.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    American Academy of Sleep Medicine —
+                    Teen Sleep Recommendations
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>☾ Prioritize Sleep · Give Your Body the Rest It Deserves</p>
+
+    <p>Rest well. Learn better. Live healthier.</p>
+
+    <p>Educational Website Project</p>
+
+</footer>
+
+</div>
+
+<a href="#home" class="back-top">↑ Top</a>
+
+<script>
+
+/* GAME 1: GUESSING GAME */
+
+let guessSelected = null;
+
+const guessButtons = document.querySelectorAll("#guessAnswers button");
+
+guessButtons.forEach(button => {
+    button.addEventListener("click", function() {
+
+        guessSelected = this.dataset.answer;
+
+        guessButtons.forEach(btn => {
+            btn.classList.remove("selected");
+        });
+
+        this.classList.add("selected");
+
+        document.getElementById("guessFeedback").textContent =
+            "Answer selected. Click Check Answer!";
+    });
+});
+
+function checkGuess() {
+
+    const feedback = document.getElementById("guessFeedback");
+
+    if (!guessSelected) {
+        feedback.textContent = "Please select an answer first!";
+        return;
+    }
+
+    if (guessSelected === "C") {
+        feedback.innerHTML =
+            "🌙 Correct! Teenagers aged 13–18 need 8–10 hours of sleep.";
+    } else {
+        feedback.innerHTML =
+            "Not quite! The correct answer is C. 8–10 hours.";
+    }
+}
+
+function resetGuess() {
+
+    guessSelected = null;
+
+    guessButtons.forEach(button => {
+        button.classList.remove("selected", "correct", "wrong");
+    });
+
+    document.getElementById("guessFeedback").textContent =
+        "Choose your answer!";
+}
+
+/* GAME 2: MULTIPLE CHOICE QUIZ */
+
+const quizData = [
+
+    {
+        question: "What does sleep help improve?",
+        answers: [
+            "A. To improve our eyebags",
+            "B. Our memory and concentration",
+            "C. Hunger",
+            "D. To dream about your crush"
+        ],
+        correct: 1
+    },
+
+    {
+        question: "What should you avoid before bedtime?",
+        answers: [
+            "A. Relaxing",
+            "B. Using gadgets for a long time",
+            "C. Following a sleep schedule"
+        ],
+        correct: 1
+    },
+
+    {
+        question: "How many hours of sleep are recommended for teenagers?",
+        answers: [
+            "A. 2–3 hours",
+            "B. 4–5 hours",
+            "C. 8–10 hours",
+            "D. 12–15 hours"
+        ],
+        correct: 2
+    }
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let quizAnswered = false;
+let quizSelected = null;
+
+function loadQuiz() {
+
+    quizAnswered = false;
+    quizSelected = null;
+
+    const q = quizData[quizIndex];
+
+    document.getElementById("quizQuestion").textContent =
+        q.question;
+
+    const answerArea = document.getElementById("quizAnswers");
+
+    answerArea.innerHTML = "";
+
+    q.answers.forEach((answer, index) => {
+
+        const button = document.createElement("button");
+
+        button.className = "answer-option";
+        button.textContent = answer;
+
+        button.onclick = function() {
+
+            if (quizAnswered) return;
+
+            quizSelected = index;
+
+            document.querySelectorAll("#quizAnswers button")
+                .forEach(btn => btn.classList.remove("selected"));
+
+            button.classList.add("selected");
+        };
+
+        answerArea.appendChild(button);
+    });
+
+    document.getElementById("quizFeedback").textContent =
+        "Select an answer.";
+
+    document.getElementById("quizScore").textContent =
+        "Score: " + quizScore;
+}
+
+function checkQuiz() {
+
+    if (quizAnswered) return;
+
+    if (quizSelected === null) {
+        document.getElementById("quizFeedback").textContent =
+            "Please select an answer first!";
+        return;
+    }
+
+    quizAnswered = true;
+
+    const q = quizData[quizIndex];
+
+    const buttons = document.querySelectorAll("#quizAnswers button");
+
+    buttons[q.correct].classList.add("correct");
+
+    if (quizSelected === q.correct) {
+
+        quizScore++;
+
+        document.getElementById("quizFeedback").textContent =
+            "Correct! Great job! 🌙";
+
+    } else {
+
+        buttons[quizSelected].classList.add("wrong");
+
+        document.getElementById("quizFeedback").textContent =
+            "Incorrect. The correct answer is: " +
+            q.answers[q.correct];
+    }
+
+    document.getElementById("quizScore").textContent =
+        "Score: " + quizScore + " / " + quizData.length;
+}
+
+function nextQuiz() {
+
+    quizIndex++;
+
+    if (quizIndex >= quizData.length) {
+
+        document.getElementById("quizQuestion").textContent =
+            "Quiz Completed! 🌙";
+
+        document.getElementById("quizAnswers").innerHTML = "";
+
+        document.getElementById("quizFeedback").textContent =
+            "Your final score: " + quizScore + " / " + quizData.length;
+
+        quizIndex = -1;
+
+        return;
+    }
+
+    loadQuiz();
+}
+
+/* GAME 3: TRUE OR FALSE */
+
+const tfData = [
+
+    {
+        question: "Sleep helps improve memory.",
+        answer: true
+    },
+
+    {
+        question: "Teenagers only need 3 hours of sleep.",
+        answer: false
+    },
+
+    {
+        question: "Following a sleeping schedule is a good habit.",
+        answer: true
+    },
+
+    {
+        question: "Lack of sleep can affect concentration.",
+        answer: true
+    },
+
+    {
+        question: "Sleep is not important for students.",
+        answer: false
+    }
+
+];
+
+let tfIndex = 0;
+let tfScore = 0;
+let tfAnswered = false;
+
+function loadTF() {
+
+    tfAnswered = false;
+
+    document.getElementById("tfQuestion").textContent =
+        tfData[tfIndex].question;
+
+    document.getElementById("tfFeedback").textContent =
+        "Choose True or False.";
+}
+
+function answerTF(choice) {
+
+    if (tfAnswered) return;
+
+    tfAnswered = true;
+
+    const correct = tfData[tfIndex].answer;
+
+    if (choice === correct) {
+
+        tfScore++;
+
+        document.getElementById("tfFeedback").textContent =
+            "Correct! 🌟";
+
+    } else {
+
+        document.getElementById("tfFeedback").textContent =
+            "Incorrect. The answer is " +
+            (correct ? "True." : "False.");
+    }
+
+    document.getElementById("tfScore").textContent =
+        "Score: " + tfScore + " / " + tfData.length;
+}
+
+function nextTF() {
+
+    tfIndex++;
+
+    if (tfIndex >= tfData.length) {
+
+        document.getElementById("tfQuestion").textContent =
+            "You finished the True or False game!";
+
+        document.getElementById("tfFeedback").textContent =
+            "Final Score: " + tfScore + " / " + tfData.length;
+
+        tfIndex = -1;
+
+        return;
+    }
+
+    loadTF();
+}
+
+/* INITIALIZE */
+
+loadQuiz();
+loadTF();
+
+</script>
+
+</body>
+</html>
